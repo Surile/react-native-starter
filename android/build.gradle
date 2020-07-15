@@ -6,10 +6,12 @@ buildscript {
         minSdkVersion = 16
         compileSdkVersion = 29
         targetSdkVersion = 29
+        // multiDexEnabled true
     }
     repositories {
         google()
         jcenter()
+        // maven { url 'https://dl.bintray.com/umsdk/release' }
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.3")
@@ -33,5 +35,6 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://www.jitpack.io' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
     }
 }

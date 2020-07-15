@@ -16,6 +16,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* medusaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* medusaTests.m */; };
+		641352D824BDC0C2004024CF /* UMShareModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 641352D724BDC0C2004024CF /* UMShareModule.m */; };
+		641352DB24BDC221004024CF /* RNUMConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 641352DA24BDC221004024CF /* RNUMConfigure.m */; };
 		7D97AEC58224A6763E4E2433 /* libPods-medusa-medusaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50D21FB845D3F36551CCB78 /* libPods-medusa-medusaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A14885B5BCFF5948F46B1ECB /* libPods-medusa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E242104C5C0B5561EEAE3B04 /* libPods-medusa.a */; };
@@ -54,6 +56,10 @@
 		2CDBF660376361EFEEEF1015 /* Pods-medusa-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medusa-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-medusa-tvOSTests/Pods-medusa-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* medusa-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "medusa-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* medusa-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "medusa-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		641352D624BDC0A0004024CF /* UMShareModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UMShareModule.h; sourceTree = "<group>"; };
+		641352D724BDC0C2004024CF /* UMShareModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UMShareModule.m; sourceTree = "<group>"; };
+		641352D924BDC212004024CF /* RNUMConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNUMConfigure.h; sourceTree = "<group>"; };
+		641352DA24BDC221004024CF /* RNUMConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNUMConfigure.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = medusa/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		941D2986F1078A8AD1F123AE /* Pods-medusa-medusaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-medusa-medusaTests.debug.xcconfig"; path = "Target Support Files/Pods-medusa-medusaTests/Pods-medusa-medusaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0FE24D1179083FC3CC227E1 /* libPods-medusa-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-medusa-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +131,7 @@
 		13B07FAE1A68108700A75B9A /* medusa */ = {
 			isa = PBXGroup;
 			children = (
+				641352D524BDC07B004024CF /* UMShare */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -161,8 +168,18 @@
 				2CDBF660376361EFEEEF1015 /* Pods-medusa-tvOSTests.debug.xcconfig */,
 				B41928FA9C9E501B4055995C /* Pods-medusa-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		641352D524BDC07B004024CF /* UMShare */ = {
+			isa = PBXGroup;
+			children = (
+				641352D624BDC0A0004024CF /* UMShareModule.h */,
+				641352D724BDC0C2004024CF /* UMShareModule.m */,
+				641352D924BDC212004024CF /* RNUMConfigure.h */,
+				641352DA24BDC221004024CF /* RNUMConfigure.m */,
+			);
+			path = UMShare;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -415,6 +432,8 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -435,6 +454,8 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMCommonLog.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -509,6 +530,8 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle",
+				"${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -529,6 +552,8 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMCommonLog.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -633,6 +658,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				641352D824BDC0C2004024CF /* UMShareModule.m in Sources */,
+				641352DB24BDC221004024CF /* RNUMConfigure.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

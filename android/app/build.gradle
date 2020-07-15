@@ -146,10 +146,12 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode project.env.get("ANDROID_BUILD_CODE").toInteger()
         versionName project.env.get("ANDROID_BUILD_NAME")
+        multiDexEnabled true
         resValue "string", "build_config_package", "com.more_driver_app"
         manifestPlaceholders= [
             ANDROID_APP_NAME:project.env.get('ANDROID_APP_NAME'),
             JPUSH_APPKEY:project.env.get('ANDROID_JPUSH_KEY'),
+            qqappid:"100424468"
         ]
     }
     splits {
@@ -205,6 +207,20 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
+    //Umeng SDK必须依赖基础组件库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:common:latest.integration'
+    //Umeng SDK必须依赖utdid库，所以需要加入对应依赖
+    implementation 'com.umeng.umsdk:utdid:1.1.5.3'
+    //友盟分享
+
+    implementation 'com.umeng.umsdk:share-core:6.9.4'
+    implementation 'com.umeng.umsdk:share-board:6.9.4'
+    implementation 'com.umeng.umsdk:share-qq:6.9.4'
+    implementation 'com.umeng.umsdk:share-wx:6.9.4'
+    implementation 'com.umeng.umsdk:share-sina:6.9.4'
+
+
+    implementation 'androidx.multidex:multidex:2.0.0'
 
     implementation project(':jpush-react-native')  // 添加 jpush 依赖
     implementation project(':jcore-react-native')  // 添加 jcore 依赖
