@@ -310,6 +310,8 @@ PODS:
     - React-jsi (= 0.63.0)
   - RNCMaskedView (0.1.10):
     - React
+  - RNCPicker (1.6.5):
+    - React
   - RNGestureHandler (1.6.1):
     - React
   - RNReanimated (1.9.0):
@@ -322,6 +324,25 @@ PODS:
     - React
   - toolbar-android (0.1.0-rc.2):
     - React
+  - UMCCommon (7.1.0)
+  - UMCCommonLog (2.0.0)
+  - UMCShare/Core (6.9.9):
+    - UMCCommon
+  - UMCShare/Social/ReducedQQ (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedSina (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/ReducedWeChat (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/Social/SMS (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
+  - UMCShare/UI (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -379,12 +400,20 @@ DEPENDENCIES:
   - React-RCTVibration (from `/Users/zhaolinyang/Code/medusa/node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `/Users/zhaolinyang/Code/medusa/node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - "RNCPicker (from `../node_modules/@react-native-community/picker`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - "toolbar-android (from `../node_modules/@react-native-community/toolbar-android`)"
+  - UMCCommon
+  - UMCCommonLog
+  - UMCShare/Social/ReducedQQ
+  - UMCShare/Social/ReducedSina
+  - UMCShare/Social/ReducedWeChat
+  - UMCShare/Social/SMS
+  - UMCShare/UI
   - Yoga (from `/Users/zhaolinyang/Code/medusa/node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -401,6 +430,9 @@ SPEC REPOS:
     - FlipperKit
     - lottie-ios
     - OpenSSL-Universal
+    - UMCCommon
+    - UMCCommonLog
+    - UMCShare
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -466,6 +498,8 @@ EXTERNAL SOURCES:
     :path: "/Users/zhaolinyang/Code/medusa/node_modules/react-native/ReactCommon"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
+  RNCPicker:
+    :path: "../node_modules/@react-native-community/picker"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -525,15 +559,19 @@ SPEC CHECKSUMS:
   React-RCTVibration: 77ab1cf4a5eb854b88ad5ed3e9d8509ed124525e
   ReactCommon: f63556ee9e41e9802257228237e5e660451a03cf
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
+  RNCPicker: 55b9b4240d0a9eba8733d02616775d4040de2e7d
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNReanimated: b5ccb50650ba06f6e749c7c329a1bc3ae0c88b43
   RNScreens: c526239bbe0e957b988dacc8d75ac94ec9cb19da
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   RNVectorIcons: da6fe858f5a65d7bbc3379540a889b0b12aa5976
   toolbar-android: 85f3ef4d691469f2d304e7dee4bca013aa1ba1ff
+  UMCCommon: 4e80f93492d300245683236668763dc5d0b04dbd
+  UMCCommonLog: 9b7ddde5d14a52fc1986ba5ac3121b8b2f433638
+  UMCShare: 52d9ee35f61c51eda3089a7961e1d04ce57b9d6a
   Yoga: 7d2edc5b410474191962e6dee88ee67f9b328b6b
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ae03e630fbd0f6d22148952683a117d84e6951d3
+PODFILE CHECKSUM: 1bb11ce843a086f6c3e3f208c8eb12a6953c6821
 
 COCOAPODS: 1.9.1

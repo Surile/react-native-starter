@@ -10,6 +10,12 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.medusa.umeng.DplusReactPackage;
+import com.medusa.umeng.RNUMConfigure;
+import com.umeng.commonsdk.UMConfigure;
+import com.umeng.socialize.PlatformConfig;
+
+
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -26,6 +32,7 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+          packages.add(new DplusReactPackage());
           return packages;
         }
 
@@ -44,6 +51,7 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+    RNUMConfigure.init(this, "5f0c06f89540fd07a29dbf39", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,"");
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
 
@@ -76,5 +84,11 @@ public class MainApplication extends Application implements ReactApplication {
         e.printStackTrace();
       }
     }
+  }
+  {
+    PlatformConfig.setWeixin("wxdc1e388c3822c80b", "3baf1193c85774b3fd9d18447d76cab0");
+    PlatformConfig.setSinaWeibo("3921700954", "04b48b094faeb16683c32669824ebdad", "http://sns.whalecloud.com");
+    PlatformConfig.setQQZone("10042446842", "c7394704798a158208a74ab60104f0ba");
+    // PlatformConfig.setQQFileProvider("com.tencent.sample2.fileprovider");
   }
 }
