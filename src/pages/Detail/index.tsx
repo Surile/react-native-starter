@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react'
 import { View, Text } from 'react-native'
 // import LottieView from 'lottie-react-native';
+import StatusBar from '@components/StatusBar'
 
 
 export default ({ navigation }: any) => {
@@ -18,6 +19,7 @@ export default ({ navigation }: any) => {
         <View style={{
             flex: 1
         }}>
+            <StatusBar translucent={true} barStyle="dark-content" backgroundColor="#fff"></StatusBar>
             <Text>详情</Text>
             {/* <LottieView ref={lottie} source={require('../../assets/images/home.json')} /> */}
         </View>

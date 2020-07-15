@@ -1,12 +1,9 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, NativeModules, TouchableOpacity, PixelRatio } from 'react-native'
+import { View, StyleSheet, NativeModules } from 'react-native'
 import { Button, Text } from 'native-base'
 import { UMShareModule } from '../../utils/NativeModules'
+import StatusBar from '@components/StatusBar'
 import tools from 'utils/tools'
-
-const minLineHeight = () => {
-    return 1 / PixelRatio.get()
-}
 
 
 export default ({ navigation }: any) => {
@@ -73,6 +70,7 @@ export default ({ navigation }: any) => {
             flex: 1,
             justifyContent: "center"
         }}>
+            <StatusBar translucent={true} barStyle="light-content" backgroundColor="#6a51ae" />
             <Text>{message}</Text>
 
             <Button style={styles.u_c_item} onPress={() => navigation.push('detail')}>
