@@ -9,18 +9,18 @@
 import React, { useEffect } from 'react';
 import AppStack from './navigation'
 import JPush from 'jpush-react-native';
-import * as eva from '@eva-design/eva';
-import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import { RootSiblingParent } from 'react-native-root-siblings';
 
 export default () => {
-
   useEffect(() => {
     JPush.init()
   }, [])
 
 
   return (
-    <AppStack />
+    <RootSiblingParent>
+      <AppStack />
+    </RootSiblingParent>
   );
 };
 

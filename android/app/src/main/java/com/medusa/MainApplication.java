@@ -52,6 +52,11 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     RNUMConfigure.init(this, "5f0c06f89540fd07a29dbf39", "Umeng", UMConfigure.DEVICE_TYPE_PHONE,"");
+    /**
+    * 设置组件化的Log开关
+    * 参数: boolean 默认为false，如需查看LOG设置为true
+    */
+    UMConfigure.setLogEnabled(true);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
 

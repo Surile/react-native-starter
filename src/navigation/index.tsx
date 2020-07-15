@@ -11,8 +11,16 @@ const BottomTab = createBottomTabNavigator();
 
 const BottomTabsScreen = () => (
     <BottomTab.Navigator>
-        <Stack.Screen name="home" component={Home}></Stack.Screen>
-        <Stack.Screen name="mine" component={Mine}></Stack.Screen>
+        <Stack.Screen
+            name="home"
+            component={Home}
+            options={{
+                title: "首页"
+            }}
+        ></Stack.Screen>
+        <Stack.Screen name="mine" component={Mine} options={{
+            title: "个人中心"
+        }}></Stack.Screen>
     </BottomTab.Navigator>
 )
 

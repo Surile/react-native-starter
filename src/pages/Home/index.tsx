@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, NativeModules } from 'react-native'
+import { View, StyleSheet, NativeModules, TouchableOpacity, PixelRatio } from 'react-native'
 import { Button, Text } from 'native-base'
 import { UMShareModule } from '../../utils/NativeModules'
+import tools from 'utils/tools'
 
+const minLineHeight = () => {
+    return 1 / PixelRatio.get()
+}
 
 
 export default ({ navigation }: any) => {
@@ -50,19 +54,18 @@ export default ({ navigation }: any) => {
         });
     }
     const wxauth = () => {
-        console.log('===')
         UMShareModule.auth(2, (code: any, result: any, message: any) => {
-            console.log('===111')
-            console.log('code', code)
-            console.log('result', result)
-            console.log('message', message)
+
             setMessage(message)
             if (code == 200) {
                 setMessage(result.uid)
             }
         });
-        console.log('===222')
     }
+
+
+
+
 
 
     return (
@@ -94,6 +97,9 @@ export default ({ navigation }: any) => {
             </Button>
             <Button warning style={styles.u_c_item} onPress={wxauth}>
                 <Text>微信登录</Text>
+            </Button>
+            <Button success style={styles.u_c_item} onPress={tools.alert}>
+                <Text>Roott</Text>
             </Button>
         </View>
     )
