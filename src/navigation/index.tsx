@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Detail from '@pages/Detail'
 import Home from '@pages/Home'
 import Mine from '@pages/Mine'
+import EditTextScreen from '@pages/EditText'
 
 const Stack = createStackNavigator()
 const BottomTab = createBottomTabNavigator();
@@ -60,7 +61,11 @@ const AppStack = () => {
                         title: "详情"
                     }}
                     name="detail"
-                    component={Detail} />
+                    component={Detail}
+                />
+                <Stack.Screen options={{
+                    title: "编辑"
+                }} name="editTextScreen" component={EditTextScreen}></Stack.Screen>
             </Stack.Navigator>
         </NavigationContainer>
 

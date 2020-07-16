@@ -77,6 +77,10 @@ export default ({ navigation }: any) => {
                 <Text>跳转到详情</Text>
             </Button>
 
+            <Button style={styles.u_c_item} onPress={() => navigation.push('editTextScreen')}>
+                <Text>跳转到编辑</Text>
+            </Button>
+
             <Button style={styles.u_c_item} onPress={sinashare}>
                 <Text>微博分享</Text>
             </Button>
