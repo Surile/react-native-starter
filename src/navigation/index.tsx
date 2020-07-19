@@ -6,6 +6,7 @@ import Detail from '@pages/Detail'
 import Home from '@pages/Home'
 import Mine from '@pages/Mine'
 import EditTextScreen from '@pages/EditText'
+import { StatusBar } from 'react-native'
 
 const Stack = createStackNavigator()
 const BottomTab = createBottomTabNavigator();
@@ -36,9 +37,6 @@ const AppStack = () => {
                     headerTintColor: '#030303',
                     headerBackTitleVisible: false,
                     headerTitleAlign: "center",
-                    // headerTitleStyle: {
-                    //      fontWeight: 'bold',
-                    // },
                     cardStyle: {
                         flex: 1,
                         backgroundColor: '#f5f5f9',

@@ -9,7 +9,17 @@ module.exports = {
         alias: {
           '@components': './src/components',
           '@pages': './src/pages',
+          '@utils': './src/utils',
+          '@assets': './src/assets',
+          '@store': './src/store',
         },
+      },
+    ],
+    [
+      '@babel/plugin-proposal-decorators',
+      {
+        legacy: true,
+        // decoratorsBeforeExport: true,
       },
     ],
   ],

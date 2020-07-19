@@ -1,43 +1,10 @@
 import * as React from 'react';
-import { Alert, View, TextInput, StyleSheet } from 'react-native';
+import { Alert, TextInput, StyleSheet, SafeAreaView } from 'react-native';
 import StatusBar from '@components/StatusBar';
 const EditTextScreen = ({ navigation }: any) => {
     const [text, setText] = React.useState('');
-
     const hasUnsavedChanges = Boolean(text);
-
-
-
     React.useEffect(() => {
-        // console.log('useEffect')
-
-        // navigation.addListener('beforeRemove', (e: any) => {
-        //     console.log('e', e)
-        //     const action = e.data.action;
-        //     if (!hasUnsavedChanges) {
-        //         console.log('!hasUnsavedChanges', !hasUnsavedChanges)
-
-        //         return;
-        //     }
-
-        //     console.log('!preventDefault', e.preventDefault)
-
-        //     e.preventDefault();
-
-        //     Alert.alert(
-        //         'Discard changes?',
-        //         'You have unsaved changes. Are you sure to discard them and leave the screen?',
-        //         [
-        //             { text: "Don't leave", style: 'cancel', onPress: () => { } },
-        //             {
-        //                 text: 'Discard',
-        //                 style: 'destructive',
-        //                 onPress: () => navigation.dispatch(action),
-        //             },
-        //         ]
-        //     );
-        //     console.log('!Alert')
-        // }),
         navigation.addListener('beforeRemove', (e: any) => {
             console.log('111')
             const action = e.data.action;
@@ -64,7 +31,7 @@ const EditTextScreen = ({ navigation }: any) => {
     }, [hasUnsavedChanges, navigation])
 
     return (
-        <View style={styles.content}>
+        <SafeAreaView style={styles.content}>
             <StatusBar translucent={true} barStyle="dark-content" backgroundColor="#fff" />
             <TextInput
                 autoFocus
@@ -73,7 +40,7 @@ const EditTextScreen = ({ navigation }: any) => {
                 placeholder="Type something…"
                 onChangeText={setText}
             />
-        </View>
+        </SafeAreaView>
     );
 };
 
