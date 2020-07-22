@@ -7,16 +7,22 @@
  */
 
 import React, {useEffect} from 'react';
-import AppStack from './navigation';
-import JPush from 'jpush-react-native';
 import {RootSiblingParent} from 'react-native-root-siblings';
-import {StatusBar, Platform} from 'react-native';
+import {StatusBar} from 'react-native';
+import JPush from 'jpush-react-native';
 import {Provider} from 'react-redux';
+import AppStack from './navigation';
 import store from './store';
 
 export default () => {
   useEffect(() => {
+    // JPush.setLoggerEnable(true);
+
     JPush.init();
+
+    JPush.getRegistrationID((result) =>
+      console.log('registerID:' + JSON.stringify(result)),
+    );
   }, []);
 
   return (

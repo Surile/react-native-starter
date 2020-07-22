@@ -1,19 +1,23 @@
 import React, {useState} from 'react';
 import {StyleSheet, SafeAreaView} from 'react-native';
 import {Button, Text, Card, CardItem} from 'native-base';
-import {UMShareModule} from '@utils/NativeModules';
+import {UMShareModule, UMPushModule} from '@utils/NativeModules';
 import StatusBar from '@components/StatusBar';
-
 import tools from 'utils/tools';
 
 export default ({navigation}: any) => {
   const [message, setMessage] = useState(null);
+  const [data, setData] = useState({
+    tag: 'Tags/Alias/Excusive Alias',
+    type: 'Alias Type',
+    result: '结果',
+  });
 
   const sinashare = () => {
     UMShareModule.share(
       'sssss',
-      'http://dev.umeng.com/images/tab2_1.png',
-      'http://www.umeng.com/',
+      'https://static.dev.morecycle.net//static/images/app/recycle.jpg',
+      'http://www.baidu.com/',
       'title',
       1,
       (code: any, message: any) => {
@@ -24,7 +28,7 @@ export default ({navigation}: any) => {
   const qqshare = () => {
     UMShareModule.share(
       'sssss',
-      'http://dev.umeng.com/images/tab2_1.png',
+      'https://static.dev.morecycle.net//static/images/app/recycle.jpg',
       'http://www.umeng.com/',
       'title',
       0,
@@ -36,7 +40,7 @@ export default ({navigation}: any) => {
   const wxshare = () => {
     UMShareModule.share(
       'sssss',
-      'http://dev.umeng.com/images/tab2_1.png',
+      'https://static.dev.morecycle.net//static/images/app/recycle.jpg',
       'http://www.umeng.com/',
       'title',
       2,
@@ -70,6 +74,17 @@ export default ({navigation}: any) => {
       }
     });
   };
+
+  const addTag = () => {
+    UMPushModule.addTag(data, (code: number, remain: string) => {
+      console.log('code', code);
+      console.log('re', remain);
+      if (code === 200) {
+        console.log('re', remain);
+      }
+    });
+  };
+
   return (
     <SafeAreaView>
       <Card>
@@ -113,6 +128,9 @@ export default ({navigation}: any) => {
 
       <Button success style={styles.u_c_item} onPress={tools.alert}>
         <Text>Roott</Text>
+      </Button>
+      <Button primary style={styles.u_c_item} onPress={addTag}>
+        <Text>ADD TAGS</Text>
       </Button>
     </SafeAreaView>
   );

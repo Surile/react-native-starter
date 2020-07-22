@@ -4007,8 +4007,8 @@ istanbul-reports@^3.0.2:
 
 jcore-react-native@^1.8.0:
   version "1.8.0"
-  resolved "https://registry.npm.taobao.org/jcore-react-native/download/jcore-react-native-1.8.0.tgz#924ebe30c0d4fa6a3a52a7fd162e965facc90763"
-  integrity sha1-kk6+MMDU+mo6Uqf9Fi6WX6zJB2M=
+  resolved "https://registry.yarnpkg.com/jcore-react-native/-/jcore-react-native-1.8.0.tgz#924ebe30c0d4fa6a3a52a7fd162e965facc90763"
+  integrity sha512-BhN0K9sCxqQl2Nyw4adGd9JGd0OOqN+RsOoBXvkoReGKkRzAeeCHcq4UxeojemzAX/1H9uhRCUnzruxp1olyeg==
 
 jest-changed-files@^26.1.0:
   version "26.1.0"
@@ -4485,8 +4485,8 @@ jetifier@^1.6.2:
 
 jpush-react-native@^2.8.1:
   version "2.8.1"
-  resolved "https://registry.npm.taobao.org/jpush-react-native/download/jpush-react-native-2.8.1.tgz#bd3d955c46de5ff34390720f7c3aca4371f82958"
-  integrity sha1-vT2VXEbeX/NDkHIPfDrKQ3H4KVg=
+  resolved "https://registry.yarnpkg.com/jpush-react-native/-/jpush-react-native-2.8.1.tgz#bd3d955c46de5ff34390720f7c3aca4371f82958"
+  integrity sha512-1TZvLhZbv84hzW/Wk+yd/dxBBja1WO5BQx+8YPHh0sfpOiaECd/zIlYNX4yArFKXmY1BxgQymJ06YDTWuapH6g==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
