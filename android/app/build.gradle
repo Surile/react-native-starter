@@ -220,9 +220,9 @@ dependencies {
     implementation  'com.umeng.umsdk:oaid_oppo:1.0.4' // (可选)
     implementation  'com.umeng.umsdk:oaid_vivo:1.0.0.1' // (可选)
 
-    // 友盟推送SDK
-    implementation 'com.umeng.umsdk:push:6.0.1'
-
+    implementation project(':jpush-react-native')  // 添加 jpush 依赖
+    implementation project(':jcore-react-native')  // 添加 jcore 依赖
+    
     // 友盟分享SDK
     implementation 'com.umeng.umsdk:share-core:latest.integration'
     implementation 'com.umeng.umsdk:share-board:latest.integration'

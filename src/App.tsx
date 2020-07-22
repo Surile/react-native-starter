@@ -8,16 +8,21 @@
 
 import React, {useEffect} from 'react';
 import {RootSiblingParent} from 'react-native-root-siblings';
-import {StatusBar, Platform, NativeModules} from 'react-native';
+import {StatusBar} from 'react-native';
+import JPush from 'jpush-react-native';
 import {Provider} from 'react-redux';
-import {UMPushModule} from '@utils/NativeModules';
 import AppStack from './navigation';
 import store from './store';
-const Upush = NativeModules.UMPushModule;
 
 export default () => {
   useEffect(() => {
-    Upush.appInfo((res: any) => console.log(res));
+    // JPush.setLoggerEnable(true);
+
+    JPush.init();
+
+    JPush.getRegistrationID((result) =>
+      console.log('registerID:' + JSON.stringify(result)),
+    );
   }, []);
 
   return (

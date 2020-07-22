@@ -7,8 +7,8 @@ import com.facebook.react.ReactActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.socialize.UMShareAPI;
 import com.medusa.umeng.ShareModule;
-import com.medusa.umeng.PushModule;
-import com.umeng.message.PushAgent;
+// import com.medusa.umeng.PushModule;
+// import com.umeng.message.PushAgent;
 
 
 public class MainActivity extends ReactActivity {
@@ -17,8 +17,8 @@ public class MainActivity extends ReactActivity {
   protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       ShareModule.initSocialSDK(this);
-      PushModule.initPushSDK(this);
-      PushAgent.getInstance(this).onAppStart();
+      // PushModule.initPushSDK(this);
+      // PushAgent.getInstance(this).onAppStart();
       MobclickAgent.setSessionContinueMillis(1000);
   }
 

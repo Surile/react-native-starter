@@ -16,19 +16,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import com.umeng.commonsdk.UMConfigure;
-// import com.umeng.message.IUmengRegisterCallback;
-// import com.umeng.message.MsgConstant;
-// import com.umeng.message.PushAgent;
-// import com.umeng.message.UTrack;
-// import com.umeng.message.UmengMessageHandler;
-// import com.umeng.message.UmengNotificationClickHandler;
-// import com.umeng.message.entity.UMessage;
 import com.medusa.umeng.DplusReactPackage;
 import com.medusa.umeng.RNUMConfigure;
-// import com.medusa.umeng.PushApplication;
 import com.umeng.commonsdk.UMConfigure;
-import com.umeng.message.PushAgent;
-import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.socialize.PlatformConfig;
 
 
@@ -77,42 +67,8 @@ public class MainApplication extends Application implements ReactApplication {
     */
     UMConfigure.setLogEnabled(true);
 
-    UMConfigure.init(this, "5f1681e2dbc2ec08135766e4", "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "a68dc5f74040fea6bf6888da9d2dcf12");
+    UMConfigure.init(this, "5f1681e2dbc2ec08135766e4", "Umeng", UMConfigure.DEVICE_TYPE_PHONE, "");
 
-    //获取消息推送代理示例
-    PushAgent mPushAgent = PushAgent.getInstance(this);
-    //mPushAgent.setNotificationPlaySound(MsgConstant.NOTIFICATION_PLAY_SERVER); //服务端控制声音
-
-
-    //注册推送服务，每次调用register方法都会回调该接口
-    mPushAgent.register(new IUmengRegisterCallback() {
-
-        @Override
-        public void onSuccess(String deviceToken) {
-            //注册成功会返回deviceToken deviceToken是推送消息的唯一标志
-            Log.i(TAG,"注册成功：deviceToken：-------->  " + deviceToken);
-        }
-
-        @Override
-        public void onFailure(String s, String s1) {
-            Log.e(TAG,"注册失败：-------->  " + "s:" + s + ",s1:" + s1);
-        }
-    });
-
-
-    /**
-      * 初始化厂商通道
-      */
-    //小米通道
-    // MiPushRegistar.register(this, "填写您在小米后台APP对应的xiaomi id", "填写您在小米后台APP对应的xiaomi key");
-    // //华为通道，注意华为通道的初始化参数在minifest中配置
-    // HuaWeiRegister.register(this);
-    // //魅族通道
-    // MeizuRegister.register(this, "填写您在魅族后台APP对应的app id", "填写您在魅族后台APP对应的app key");
-    // //OPPO通道
-    // OppoRegister.register(this, "填写您在OPPO后台APP对应的app key", "填写您在魅族后台APP对应的app secret");
-    // //VIVO 通道，注意VIVO通道的初始化参数在minifest中配置
-    // VivoRegister.register(this);
   }
 
   
