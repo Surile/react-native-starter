@@ -5,36 +5,34 @@
  * @format
  * @flow strict-local
  */
-
-import React, {useEffect} from 'react';
-import {RootSiblingParent} from 'react-native-root-siblings';
-import {StatusBar} from 'react-native';
-import JPush from 'jpush-react-native';
-import {Provider} from 'react-redux';
-import AppStack from './navigation';
-import store from './store';
+import store from './store'
+import React, { useEffect } from 'react'
+import { StatusBar } from 'react-native'
+import AppStack from './navigation'
+import { Provider } from 'react-redux'
+import JPush from 'jpush-react-native'
+import { NativeBaseProvider, theme } from 'native-base'
 
 export default () => {
   useEffect(() => {
     // JPush.setLoggerEnable(true);
-
-    JPush.init();
+    JPush.init()
 
     JPush.getRegistrationID((result) =>
-      console.log('registerID:' + JSON.stringify(result)),
-    );
-  }, []);
+      console.log('registerID:' + JSON.stringify(result))
+    )
+  }, [])
 
   return (
-    <Provider store={store}>
-      <StatusBar
-        translucent={true}
-        barStyle="dark-content"
-        backgroundColor="transparent"
-      />
-      <RootSiblingParent>
+    <NativeBaseProvider theme={theme}>
+      <Provider store={store}>
+        <StatusBar
+          translucent={true}
+          barStyle="dark-content"
+          backgroundColor="transparent"
+        />
         <AppStack />
-      </RootSiblingParent>
-    </Provider>
-  );
-};
+      </Provider>
+    </NativeBaseProvider>
+  )
+}

@@ -12,35 +12,15 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1504F4D7DF7D4A4CBDD05A23 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C6B8542F6874E508D861DA1 /* EvilIcons.ttf */; };
-		2B17B0921B30418D85A32AEF /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BBBDCB559A345F191A13B3B /* MaterialCommunityIcons.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* medusaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* medusaTests.m */; };
-		358199582E93409F87131A9B /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A714721F0B044D29CAE1C31 /* SimpleLineIcons.ttf */; };
-		4239A1E9C2FC4F17BFCD4822 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2585CAFC7E1548ABA52A1A4E /* Entypo.ttf */; };
-		4BB89570673841109782A086 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3EE0E9493BE439ABADAD95E /* FontAwesome5_Brands.ttf */; };
-		50CB49230C4442E69142941E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 44AEADA21EDD4306A3A93A70 /* Zocial.ttf */; };
-		53AA36A9688142DDB50A9C4C /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62BCAC1C4FB14351B89798A9 /* MaterialIcons.ttf */; };
-		55357E3CF310449D93DDEA81 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E40A7BC8B2AB4E18A238EC8E /* rubicon-icon-font.ttf */; };
-		57CD9AFB2DA84F6884017E6F /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A40BE08CEE7412AB918E81C /* AntDesign.ttf */; };
-		59758105D1C041A3AF2A8A60 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C4B2C6EADA48319C7692E1 /* Feather.ttf */; };
 		641352D824BDC0C2004024CF /* UMShareModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 641352D724BDC0C2004024CF /* UMShareModule.m */; };
 		641352DB24BDC221004024CF /* RNUMConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 641352DA24BDC221004024CF /* RNUMConfigure.m */; };
-		6493772D24C449AE00DC23B7 /* PingFang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6493772C24C449AE00DC23B7 /* PingFang.ttf */; };
-		706F5D166DCE47469C1F8ACA /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E37914A6C11244689C752F58 /* Foundation.ttf */; };
-		71A3A37D478A4907943851BD /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 643C653292CC4EE19E614166 /* Roboto_medium.ttf */; };
 		7D97AEC58224A6763E4E2433 /* libPods-medusa-medusaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E50D21FB845D3F36551CCB78 /* libPods-medusa-medusaTests.a */; };
-		7EB28441B0864043A97CBEBF /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D84B049A4FFD4448B7CF6B03 /* Fontisto.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		828394934CC04EAE815038E6 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F06139DEFA9C4AC5B23E894F /* FontAwesome.ttf */; };
-		98A6E27E19E94927B0700DB4 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A97BD845935C48DF959A6416 /* Octicons.ttf */; };
 		A14885B5BCFF5948F46B1ECB /* libPods-medusa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E242104C5C0B5561EEAE3B04 /* libPods-medusa.a */; };
-		BFBED285F2864F9A883830D4 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A721D60976A464A994EF18D /* FontAwesome5_Solid.ttf */; };
-		D946D2409E304BB2A689CC9A /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3199A94155A24CB98F2408A9 /* Roboto.ttf */; };
-		EB4FCB6F9DC14DC6A61917B0 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 08F0F1BAE30E41B1AA55D045 /* FontAwesome5_Regular.ttf */; };
-		F1C10FD1395F4E3D9E6D1845 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30B59ADA791A46DD95C28877 /* Ionicons.ttf */; };
 		FFB0D9AD0969CCE851ECCF04 /* libPods-medusa-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F677DE1CD7F1CDD8F01C88CB /* libPods-medusa-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
@@ -295,6 +275,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				4DAFD9FEC58B23332E7EC5C3 /* [CP] Copy Pods Resources */,
+				502C682BB57AD7F4087B3FFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,6 +298,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				BCE4DA8EC2817D871148791A /* [CP] Copy Pods Resources */,
+				64C8B55D26AAE09D7CAA6543 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,26 +409,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				57CD9AFB2DA84F6884017E6F /* AntDesign.ttf in Resources */,
-				4239A1E9C2FC4F17BFCD4822 /* Entypo.ttf in Resources */,
-				1504F4D7DF7D4A4CBDD05A23 /* EvilIcons.ttf in Resources */,
-				6493772D24C449AE00DC23B7 /* PingFang.ttf in Resources */,
-				59758105D1C041A3AF2A8A60 /* Feather.ttf in Resources */,
-				828394934CC04EAE815038E6 /* FontAwesome.ttf in Resources */,
-				4BB89570673841109782A086 /* FontAwesome5_Brands.ttf in Resources */,
-				EB4FCB6F9DC14DC6A61917B0 /* FontAwesome5_Regular.ttf in Resources */,
-				BFBED285F2864F9A883830D4 /* FontAwesome5_Solid.ttf in Resources */,
-				7EB28441B0864043A97CBEBF /* Fontisto.ttf in Resources */,
-				706F5D166DCE47469C1F8ACA /* Foundation.ttf in Resources */,
-				F1C10FD1395F4E3D9E6D1845 /* Ionicons.ttf in Resources */,
-				2B17B0921B30418D85A32AEF /* MaterialCommunityIcons.ttf in Resources */,
-				53AA36A9688142DDB50A9C4C /* MaterialIcons.ttf in Resources */,
-				98A6E27E19E94927B0700DB4 /* Octicons.ttf in Resources */,
-				71A3A37D478A4907943851BD /* Roboto_medium.ttf in Resources */,
-				D946D2409E304BB2A689CC9A /* Roboto.ttf in Resources */,
-				55357E3CF310449D93DDEA81 /* rubicon-icon-font.ttf in Resources */,
-				358199582E93409F87131A9B /* SimpleLineIcons.ttf in Resources */,
-				50CB49230C4442E69142941E /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +500,46 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		502C682BB57AD7F4087B3FFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-medusa-medusaTests/Pods-medusa-medusaTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-DoubleConversion/double-conversion.framework/double-conversion",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/double-conversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-medusa-medusaTests/Pods-medusa-medusaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64C8B55D26AAE09D7CAA6543 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-medusa/Pods-medusa-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-DoubleConversion/double-conversion.framework/double-conversion",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/double-conversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-medusa/Pods-medusa-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B68894836368C9FD19143FE5 /* [CP] Check Pods Manifest.lock */ = {

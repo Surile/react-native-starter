@@ -1,165 +1,161 @@
-/**
- * Created by wangfei on 17/8/28.
- */
-import React, {Component} from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  Button,
-  TouchableOpacity,
-  AsyncStorage,
-  View,
-  Alert,
-} from 'react-native';
-import {UMAnalyticsModule} from '@utils/NativeModules';
+import React, { Component } from 'react'
+import { StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native'
+import { UMAnalyticsModule } from '@utils/NativeModules'
 
 export default class UserCenter extends Component {
   componentWillMount() {
-    console.log('aaa componentWillMount');
+    console.log('aaa componentWillMount')
   }
   componentWillUnmount() {
-    console.log('aaa componentWillUnmount');
+    console.log('aaa componentWillUnmount')
   }
   profileSignInWithPUID() {
-    UMAnalyticsModule.profileSignInWithPUID('myname');
+    UMAnalyticsModule.profileSignInWithPUID('myname')
   }
   profileSignInWithPUIDWithProvider() {
-    UMAnalyticsModule.profileSignInWithPUIDWithProvider(
-      'weixin',
-      '18829283888',
-    );
+    UMAnalyticsModule.profileSignInWithPUIDWithProvider('weixin', '18829283888')
   }
   profileSignOff() {
-    UMAnalyticsModule.profileSignOff();
+    UMAnalyticsModule.profileSignOff()
   }
 
   onPageStart() {
-    UMAnalyticsModule.onPageStart('MainPage');
+    UMAnalyticsModule.onPageStart('MainPage')
   }
   onPageEnd() {
-    UMAnalyticsModule.onPageEnd('MainPage');
+    UMAnalyticsModule.onPageEnd('MainPage')
   }
   onEvent() {
-    UMAnalyticsModule.onEvent('event0');
+    UMAnalyticsModule.onEvent('event0')
   }
   onEventWithLable() {
-    UMAnalyticsModule.onEventWithLable('event1', 'label');
+    UMAnalyticsModule.onEventWithLable('event1', 'label')
   }
   onEventWithMap() {
-    UMAnalyticsModule.onEventWithMap('event2', {name: 'umeng', sex: 'man'});
+    UMAnalyticsModule.onEventWithMap('event2', { name: 'umeng', sex: 'man' })
   }
   onEventWithMapAndCount() {
     UMAnalyticsModule.onEventWithMapAndCount(
       'event3',
-      {name: 'umeng', sex: 'man'},
-      100,
-    );
+      { name: 'umeng', sex: 'man' },
+      100
+    )
   }
 
   onEventObject() {
-    UMAnalyticsModule.onEventObject('event4', {name: 'umeng', sex: 'man'});
+    UMAnalyticsModule.onEventObject('event4', { name: 'umeng', sex: 'man' })
   }
   registerPreProperties() {
-    UMAnalyticsModule.registerPreProperties({name: 'umeng', sex: 'man'});
+    UMAnalyticsModule.registerPreProperties({ name: 'umeng', sex: 'man' })
   }
   unregisterPreProperty() {
-    UMAnalyticsModule.unregisterPreProperty('name');
+    UMAnalyticsModule.unregisterPreProperty('name')
   }
 
   getPreProperties() {
     UMAnalyticsModule.getPreProperties((result: any) => {
-      console.log(result);
+      console.log(result)
       //Alert窗口仅测试用，可删除
       Alert.alert(
         'getPreProperties返回值',
         result,
-        [{text: '确定', onPress: () => console.log('Ask me later pressed')}],
-        {cancelable: false},
-      );
-    });
+        [{ text: '确定', onPress: () => console.log('Ask me later pressed') }],
+        { cancelable: false }
+      )
+    })
   }
   clearPreProperties() {
-    UMAnalyticsModule.clearPreProperties();
+    UMAnalyticsModule.clearPreProperties()
   }
   setFirstLaunchEvent() {
-    UMAnalyticsModule.setFirstLaunchEvent(['111', '222', '333']);
+    UMAnalyticsModule.setFirstLaunchEvent(['111', '222', '333'])
   }
 
   render() {
     // const {navigate} = this.props.navigation;
     return (
       <View style={styles.u_c}>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{ flexDirection: 'row' }}>
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.profileSignInWithPUID.bind(this)}>
+            onPress={this.profileSignInWithPUID.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'用户登录'}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.profileSignOff.bind(this)}>
+            onPress={this.profileSignOff.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'用户登出'}</Text>
           </TouchableOpacity>
         </View>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{ flexDirection: 'row' }}>
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.onEvent.bind(this)}>
+            onPress={this.onEvent.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'普通事件'}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.onEventWithMap.bind(this)}>
+            onPress={this.onEventWithMap.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'多属性事件'}</Text>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity
           style={styles.u_c_item}
-          onPress={this.onEventObject.bind(this)}>
+          onPress={this.onEventObject.bind(this)}
+        >
           <Text style={styles.u_c_text}>{'onEventObject'}</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.u_c_item}
-          onPress={this.onEventWithMapAndCount.bind(this)}>
+          onPress={this.onEventWithMapAndCount.bind(this)}
+        >
           <Text style={styles.u_c_text}>{'数值性统计'}</Text>
         </TouchableOpacity>
 
-        <View style={{flexDirection: 'row'}}>
+        <View style={{ flexDirection: 'row' }}>
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.registerPreProperties.bind(this)}>
+            onPress={this.registerPreProperties.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'设置超级属性'}</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.unregisterPreProperty.bind(this)}>
+            onPress={this.unregisterPreProperty.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'删除超级属性'}</Text>
           </TouchableOpacity>
         </View>
-        <View style={{flexDirection: 'row'}}>
+        <View style={{ flexDirection: 'row' }}>
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.getPreProperties.bind(this)}>
+            onPress={this.getPreProperties.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'获取超级属性'}</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
             style={styles.u_c_item}
-            onPress={this.clearPreProperties.bind(this)}>
+            onPress={this.clearPreProperties.bind(this)}
+          >
             <Text style={styles.u_c_text}>{'清除超级属性'}</Text>
           </TouchableOpacity>
         </View>
 
         <TouchableOpacity
           style={styles.u_c_item}
-          onPress={this.setFirstLaunchEvent.bind(this)}>
+          onPress={this.setFirstLaunchEvent.bind(this)}
+        >
           <Text style={styles.u_c_text}>{'关注首次触发事件'}</Text>
         </TouchableOpacity>
       </View>
-    );
+    )
   }
 }
 
@@ -174,7 +170,7 @@ const styles = StyleSheet.create({
     elevation: 10,
 
     borderWidth: 1.5,
-    shadowOffset: {width: 0, height: 0},
+    shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 1,
     shadowRadius: 5,
     justifyContent: 'center',
@@ -183,4 +179,4 @@ const styles = StyleSheet.create({
   u_c_text: {
     fontSize: 24,
   },
-});
+})

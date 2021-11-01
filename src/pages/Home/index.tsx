@@ -1,17 +1,14 @@
-import React, {useState} from 'react';
-import {StyleSheet, SafeAreaView} from 'react-native';
-import {Button, Text, Card, CardItem} from 'native-base';
-import {UMShareModule, UMPushModule} from '@utils/NativeModules';
-import StatusBar from '@components/StatusBar';
-import tools from 'utils/tools';
+import React, { useState } from 'react'
+import { Box, Button, Text } from 'native-base'
+import { UMShareModule, UMPushModule } from '@utils/NativeModules'
 
-export default ({navigation}: any) => {
-  const [message, setMessage] = useState(null);
-  const [data, setData] = useState({
+export default ({ navigation }: any) => {
+  const [message, setMessage] = useState(null)
+  const data = {
     tag: 'Tags/Alias/Excusive Alias',
     type: 'Alias Type',
     result: '结果',
-  });
+  }
 
   const sinashare = () => {
     UMShareModule.share(
@@ -21,10 +18,10 @@ export default ({navigation}: any) => {
       'title',
       1,
       (code: any, message: any) => {
-        setMessage(message);
-      },
-    );
-  };
+        setMessage(message)
+      }
+    )
+  }
   const qqshare = () => {
     UMShareModule.share(
       'sssss',
@@ -33,10 +30,10 @@ export default ({navigation}: any) => {
       'title',
       0,
       (code: any, message: any) => {
-        setMessage(message);
-      },
-    );
-  };
+        setMessage(message)
+      }
+    )
+  }
   const wxshare = () => {
     UMShareModule.share(
       'sssss',
@@ -45,99 +42,84 @@ export default ({navigation}: any) => {
       'title',
       2,
       (code: any, message: any) => {
-        setMessage(message);
-      },
-    );
-  };
+        setMessage(message)
+      }
+    )
+  }
 
   const qqauth = () => {
     UMShareModule.auth(0, (code: any, result: any, message: any) => {
-      setMessage(message);
+      setMessage(message)
       if (code == 200) {
-        setMessage(result.uid);
+        setMessage(result.uid)
       }
-    });
-  };
+    })
+  }
   const sinaauth = () => {
     UMShareModule.auth(1, (code: any, result: any, message: any) => {
-      setMessage(message);
+      setMessage(message)
       if (code == 200) {
-        setMessage(result.uid);
+        setMessage(result.uid)
       }
-    });
-  };
+    })
+  }
   const wxauth = () => {
     UMShareModule.auth(2, (code: any, result: any, message: any) => {
-      setMessage(message);
+      setMessage(message)
       if (code == 200) {
-        setMessage(result.uid);
+        setMessage(result.uid)
       }
-    });
-  };
+    })
+  }
 
   const addTag = () => {
     UMPushModule.addTag(data, (code: number, remain: string) => {
-      console.log('code', code);
-      console.log('re', remain);
+      console.log('code', code)
+      console.log('re', remain)
       if (code === 200) {
-        console.log('re', remain);
+        console.log('re', remain)
       }
-    });
-  };
+    })
+  }
 
   return (
-    <SafeAreaView>
-      <Card>
-        <CardItem>
-          <Text>{message}</Text>
-        </CardItem>
-      </Card>
-      <Button style={styles.u_c_item} onPress={() => navigation.push('detail')}>
-        <Text>跳转到详情</Text>
+    <Box p="12" rounded="lg">
+      <Text fontSize="xs">{message}</Text>
+      <Text fontSize="xs">{data.result}</Text>
+      <Button.Group>
+        <Button colorScheme="teal">Save</Button>
+        <Button colorScheme="danger">Cancel</Button>
+      </Button.Group>
+      <Button mt={2} colorScheme="primary">
+        跳转到详情
       </Button>
-
-      <Button
-        style={styles.u_c_item}
-        onPress={() => navigation.push('editTextScreen')}>
-        <Text>跳转到编辑</Text>
+      <Button mt={2} colorScheme="primary">
+        跳转到编辑
       </Button>
-
-      <Button style={styles.u_c_item} onPress={sinashare}>
-        <Text>微博分享</Text>
+      <Button mt={2} colorScheme="primary">
+        微博分享
       </Button>
-
-      <Button style={styles.u_c_item} onPress={qqshare}>
-        <Text>QQ分享</Text>
+      <Button mt={2} colorScheme="primary">
+        QQ分享
       </Button>
-
-      <Button style={styles.u_c_item} onPress={wxshare}>
-        <Text>微信分享</Text>
+      <Button mt={2} colorScheme="primary">
+        微信分享
       </Button>
-
-      <Button warning style={styles.u_c_item} onPress={sinaauth}>
-        <Text>微博登录</Text>
+      <Button mt={2} colorScheme="primary">
+        微博登录
       </Button>
-
-      <Button warning style={styles.u_c_item} onPress={qqauth}>
-        <Text>QQ登录</Text>
+      <Button mt={2} colorScheme="primary">
+        QQ登录
       </Button>
-
-      <Button warning style={styles.u_c_item} onPress={wxauth}>
-        <Text>微信登录</Text>
+      <Button mt={2} colorScheme="primary">
+        微信登录
       </Button>
-
-      <Button success style={styles.u_c_item} onPress={tools.alert}>
-        <Text>Roott</Text>
+      <Button mt={2} colorScheme="primary">
+        Roott
       </Button>
-      <Button primary style={styles.u_c_item} onPress={addTag}>
-        <Text>ADD TAGS</Text>
+      <Button mt={2} colorScheme="primary">
+        ADD TAGS
       </Button>
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  u_c_item: {
-    margin: 10,
-  },
-});
+    </Box>
+  )
+}

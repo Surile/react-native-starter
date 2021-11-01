@@ -1,16 +1,19 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Detail from '@pages/Detail';
-import Home from '@pages/Home';
-import Mine from '@pages/Mine';
-import EditTextScreen from '@pages/EditText';
-import Share from '@pages/Share';
-import Analytics from '@pages/Analytics';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import {
+  createStackNavigator,
+  TransitionPresets,
+} from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import Detail from '@pages/Detail'
+import Home from '@pages/Home'
+import Mine from '@pages/Mine'
+import EditTextScreen from '@pages/EditText'
+import Share from '@pages/Share'
+import Analytics from '@pages/Analytics'
 
-const Stack = createStackNavigator();
-const BottomTab = createBottomTabNavigator();
+const Stack = createStackNavigator()
+const BottomTab = createBottomTabNavigator()
 
 const BottomTabsScreen = () => (
   <BottomTab.Navigator>
@@ -19,27 +22,31 @@ const BottomTabsScreen = () => (
       component={Home}
       options={{
         title: '首页',
-      }}></Stack.Screen>
+      }}
+    />
     <Stack.Screen
       name="share"
       component={Share}
       options={{
         title: '分享',
-      }}></Stack.Screen>
+      }}
+    />
     <Stack.Screen
       name="analytics"
       component={Analytics}
       options={{
         title: '统计',
-      }}></Stack.Screen>
+      }}
+    />
     <Stack.Screen
       name="mine"
       component={Mine}
       options={{
         title: '个人中心',
-      }}></Stack.Screen>
+      }}
+    />
   </BottomTab.Navigator>
-);
+)
 
 const AppStack = () => {
   return (
@@ -60,11 +67,12 @@ const AppStack = () => {
             elevation: 0.5,
           },
           ...TransitionPresets.SlideFromRightIOS,
-        }}>
+        }}
+      >
         <Stack.Screen
           name="BottomTabScreen"
           component={BottomTabsScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           options={{
@@ -78,10 +86,11 @@ const AppStack = () => {
             title: '编辑',
           }}
           name="editTextScreen"
-          component={EditTextScreen}></Stack.Screen>
+          component={EditTextScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}
 
-export default AppStack;
+export default AppStack
