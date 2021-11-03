@@ -17,8 +17,7 @@ const Detail = (props: any, { navigation }: any) => {
       alignItems={{
         base: 'center',
         md: 'flex-start',
-      }}
-    >
+      }}>
       <Button variant="outline">increment</Button>
       <Button variant="outline">decrement</Button>
     </Stack>

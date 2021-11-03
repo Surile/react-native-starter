@@ -67,8 +67,7 @@ const AppStack = () => {
             elevation: 0.5,
           },
           ...TransitionPresets.SlideFromRightIOS,
-        }}
-      >
+        }}>
         <Stack.Screen
           name="BottomTabScreen"
           component={BottomTabsScreen}

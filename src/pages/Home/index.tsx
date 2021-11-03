@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
 import { Box, Button, Text } from 'native-base'
-import { UMShareModule, UMPushModule } from '@utils/NativeModules'
+import { UMShareModule } from '@utils/NativeModules'
+import { StackNavigationProp } from '@react-navigation/stack'
+import { RootStackParamList } from '../../../navigation'
 
-export default ({ navigation }: any) => {
+type HomeScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Detail'
+>
+
+export default ({ navigation }: { navigation: HomeScreenNavigationProp }) => {
   const [message, setMessage] = useState(null)
   const data = {
     tag: 'Tags/Alias/Excusive Alias',
@@ -19,7 +26,7 @@ export default ({ navigation }: any) => {
       1,
       (code: any, message: any) => {
         setMessage(message)
-      }
+      },
     )
   }
   const qqshare = () => {
@@ -31,7 +38,7 @@ export default ({ navigation }: any) => {
       0,
       (code: any, message: any) => {
         setMessage(message)
-      }
+      },
     )
   }
   const wxshare = () => {
@@ -43,7 +50,7 @@ export default ({ navigation }: any) => {
       2,
       (code: any, message: any) => {
         setMessage(message)
-      }
+      },
     )
   }
 
@@ -72,16 +79,6 @@ export default ({ navigation }: any) => {
     })
   }
 
-  const addTag = () => {
-    UMPushModule.addTag(data, (code: number, remain: string) => {
-      console.log('code', code)
-      console.log('re', remain)
-      if (code === 200) {
-        console.log('re', remain)
-      }
-    })
-  }
-
   return (
     <Box p="12" rounded="lg">
       <Text fontSize="xs">{message}</Text>
@@ -90,35 +87,39 @@ export default ({ navigation }: any) => {
         <Button colorScheme="teal">Save</Button>
         <Button colorScheme="danger">Cancel</Button>
       </Button.Group>
-      <Button mt={2} colorScheme="primary">
+      <Button
+        onPress={() => {
+          navigation.push('Detail')
+        }}
+        mt={2}
+        colorScheme="primary">
         跳转到详情
       </Button>
-      <Button mt={2} colorScheme="primary">
+      <Button
+        onPress={() => {
+          navigation.push('EditTextScreen')
+        }}
+        mt={2}
+        colorScheme="primary">
         跳转到编辑
       </Button>
-      <Button mt={2} colorScheme="primary">
+      <Button onPress={() => sinashare()} mt={2} colorScheme="primary">
         微博分享
       </Button>
-      <Button mt={2} colorScheme="primary">
+      <Button onPress={() => qqshare()} mt={2} colorScheme="primary">
         QQ分享
       </Button>
-      <Button mt={2} colorScheme="primary">
+      <Button onPress={() => wxshare()} mt={2} colorScheme="primary">
         微信分享
       </Button>
-      <Button mt={2} colorScheme="primary">
+      <Button onPress={() => sinaauth()} mt={2} colorScheme="primary">
         微博登录
       </Button>
-      <Button mt={2} colorScheme="primary">
+      <Button onPress={() => qqauth()} mt={2} colorScheme="primary">
         QQ登录
       </Button>
-      <Button mt={2} colorScheme="primary">
+      <Button onPress={() => wxauth()} mt={2} colorScheme="primary">
         微信登录
-      </Button>
-      <Button mt={2} colorScheme="primary">
-        Roott
-      </Button>
-      <Button mt={2} colorScheme="primary">
-        ADD TAGS
       </Button>
     </Box>
   )
